@@ -12,6 +12,7 @@ RSpec.feature "user can view their own info" do
 
         expect(page).to have_content('Rachio Beta')
         expect(page).to have_content('devices')
+        expect(page).to have_content('c761bfa0-4c49-4b4f-8a79-04e42bea881a')
       end
     end
   end
