@@ -15,6 +15,10 @@ class RachioService
     parse(connection.get("person/#{id}"))
   end
 
+  def get_device_info(id)
+    parse(connection.get("device/#{id}"))
+  end
+
   private
     def connection
       @_connection

@@ -1,5 +1,5 @@
 class DevicesController < ApplicationController
   def show
-    require "pry"; binding.pry
+    @device = Device.find(params[:id])
   end
 end

@@ -3,7 +3,7 @@
     <h1><%= @user.full_name %></h1>
     <h2>devices</h2>
     <% @user.devices.each do |device| %>
-      <%= link_to "device ##{device[:id]}", device_path(id: device[:id]) %>
+      <%= link_to "device #{device[:id]}", device_path(id: device[:id]), id:"#{device[:id]}" %>
     <% end %>
   </div>
 </div>

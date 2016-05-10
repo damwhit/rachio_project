@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "user can view their own info" do
   context "as a logged in user" do
-    VCR.use_cassette("products_search") do
+    VCR.use_cassette("user_info") do
       it "shows fullname and devices" do
         visit '/'
 
