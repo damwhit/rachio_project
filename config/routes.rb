@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get "/user", to: 'users#show'
 
   get "/device", to: 'devices#show'
+
+  patch '/device', to: 'devices#update'
 end
