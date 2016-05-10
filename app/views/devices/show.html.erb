@@ -2,5 +2,6 @@
   <div class="row">
     <h1>device <%= @device.id %></h1>
     <h2>status: <%= @device.status %></h2>
+    <h3><%= link_to "run all zones", device_path(id: @device.id), method: :patch %></h3>
   </div>
 </div>

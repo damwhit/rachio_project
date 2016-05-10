@@ -18,6 +18,11 @@ RSpec.feature "user can run all zones for a given device" do
           expect(page).to have_content('ONLINE')
         end
 
+        click_on("run all zones")
+
+        within('.alert') do
+          expect(page).to have_content('all zones are now running for device c761bfa0-4c49-4b4f-8a79-04e42bea881a')
+        end
       end
     end
   end

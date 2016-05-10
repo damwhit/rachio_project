@@ -19,6 +19,10 @@ class RachioService
     parse(connection.get("device/#{id}"))
   end
 
+  def run_all_zones(zone_info)
+    connection.put("zone/start_multiple", { zones: zone_info }.to_json)
+  end
+
   private
     def connection
       @_connection
