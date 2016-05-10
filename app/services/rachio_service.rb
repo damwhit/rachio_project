@@ -6,8 +6,13 @@ class RachioService
     connection.headers['Content-Type'] = "application/json"
   end
 
-  def get_user_info
-    connection.get('person/info')
+  def find_user
+    id = parse(connection.get('person/info'))[:id]
+    get_user_info(id)
+  end
+
+  def get_user_info(id)
+    parse(connection.get("person/#{id}"))
   end
 
   private
@@ -17,5 +22,9 @@ class RachioService
 
     def token
       ENV['rachio_api_key']
+    end
+
+    def parse(response)
+      JSON.parse(response.body, symbolize_names: true)
     end
 end

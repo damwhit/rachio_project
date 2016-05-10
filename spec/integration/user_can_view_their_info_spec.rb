@@ -7,11 +7,11 @@ RSpec.feature "user can view their own info" do
         visit '/'
 
         click_on 'profile'
-        
+
         expect(current_path).to eq('/user')
 
-        expect(page).to have_content('Franz Garsombke')
-
+        expect(page).to have_content('Rachio Beta')
+        expect(page).to have_content('devices')
       end
     end
   end

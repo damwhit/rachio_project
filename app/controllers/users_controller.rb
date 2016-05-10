@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def show
-    User.find
+    @user = User.find
   end
 end
